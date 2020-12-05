@@ -1,10 +1,9 @@
 version: '2'
 services:
-  dd7265748b5d:
-    image: 'sha256:dd7265748b5dc3211208fb9aa232cef8d3fefd5d9a2a80d87407b8ea649e571c'
   mysql:
-    image: mysql
+    image: 'mysql:latest'
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
   tomcat:
     image: tomcat
-    ports:
-      - 'localhost:8888'
+    ports: []
